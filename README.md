@@ -21,4 +21,4 @@ In questo tipo di radar si invia un segnale sinusoidale continuo ad una certa fr
 La variazione in frequenza dovuta al Doppler dipende dalla velocità *c’* della luce nell’aria (*c’* poichè è leggermente più lenta che nel vuoto) e da *v* la velocità dell’oggetto target:
 
 
-![f1.png](/img/f1.png)
+![f1.png](./img/f1.png)
