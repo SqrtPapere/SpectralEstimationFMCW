@@ -22,3 +22,55 @@ La variazione in frequenza dovuta al Doppler dipende dalla velocità *c’* dell
 
 
 ![f1.png](./img/f1.png)
+
+Lo shift sarà quindi:
+
+![f2.png](./img/f2.png)
+
+
+
+| ![f3.png](./img/f3.png) | 
+|:--:| 
+| *Variazione della lunghezza d’onda causata dal movimento dell’oggetto target* |
+
+## Modulated continuous-wave
+
+Con questo tipo di radar, anche detto Frequency-modulated continuous-wave radar (FM-CW), è possibile rilevare anche la distanza degli oggetti, migliorando l’affidabilità delle misurazioni ed è indispensabile quando è presente più di un oggetto che riflette il segnale in arrivo dall’antenna del radar. Questo tipo di radar è spesso usato come altimetro per misurare l’altezza esatta durante gli atterraggi aerei, o nei sensori di prossimità.
+
+In questi sistemi il segnale trasmesso è un’onda con frequenza variabile e può seguire vari modelli:
+
+- *Sawtooth wave*, con forma a dente di sega
+- *Triangle wave*, con forma triangolare
+- *Square wave*, con forma quadrata
+
+In questo progetto è stato usato il modello *Triangle*, in cui si susseguono segnali ”chirp” in salita e discesa. Il termine chirp deriva dall’inglese ed indica un suono corto e acuto, come quello emesso da un insetto o da un uccello.
+
+| ![f4.png](./img/f4.png) | 
+|:--:| 
+| *Chirp triangolari trasmessi e ricevuti* |
+
+Il chirp consiste di due rampe con pendenza opposta, entrambe di durata *T/2*. Il segnale ricevuto è ritardato del tempo che il segnale ha impiegato per raggiungere l’oggetto e tornare all’antenna radar. Inoltre il chirp ricevuto ha subito uno slittamento in frequenza pari a f_D.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
