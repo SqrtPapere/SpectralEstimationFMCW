@@ -51,26 +51,30 @@ In questo progetto è stato usato il modello *Triangle*, in cui si susseguono se
 
 Il chirp consiste di due rampe con pendenza opposta, entrambe di durata *T/2*. Il segnale ricevuto è ritardato del tempo che il segnale ha impiegato per raggiungere l’oggetto e tornare all’antenna radar. Inoltre il chirp ricevuto ha subito uno slittamento in frequenza pari a f_D.
 
+## Segnale sintetico
+
+Il segnale sintetico su cui abbiamo testato i metodi di stima spettrale sono appunto i chirp, un tipo di segnale di fondamentale importanza nell’utilizzo di sistemi radar.
+Considerando una rampa con frequenza lineare crescente che parte da una frequenza portante *fc* ed arriva ad *fc + B*, allora la frequenza al tempo t può essere calcolata come:
+
+![f5.png](./img/f5.png)
+
+dove T è la durata della rampa. La fase corrispondente è l’integrale dell’equazione precedente rispetto a *t*.
+
+Per calcolarne lo spettrogramma, il segnale è stato diviso in finestre di lunghezza k e su ogni finestra è stato applicato uno dei metodi da noi sviluppati per il calcolo del periodogramma. I periodogrammi implilati lungo l’asse temporale rappresentano lo spettrogramma del segnale.
+Di seguito vengono mostrati i plot de- gli spettrogrammi ottenuti con le diverse tecniche e parametri calcolati su un chirp di durata 4 ms campionato a 1000 Hz che raggiunge il picco massimo di 500 Hz a 2 ms.
 
 
+| ![chirp80-welbart-40-50.png](./img/chirp80-welbart-40-50.png) | 
+|:--:| 
+| *Spettrogramma di un chirp con k=80, utilizzando il periodogramma welch-bartlett con finestratura di hamming a 40 campioni e overlap 50%* |
 
 
+| ![chirp80-period.png](./img/chirp80-period.png) | 
+|:--:| 
+| *Spettrogramma di un chirp con k=80, utilizzando il periodogramma classico* |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+| ![chirp80-blacktuc-bartlett-25.png](./img/chirp80-blacktuc-bartlett-25.png) | 
+|:--:| 
+| *Spettrogramma di un chirp con k=80, utilizzando il periodogramma blackman-tuckey con finestratura di bartlett a 25 campioni* |
 
 
